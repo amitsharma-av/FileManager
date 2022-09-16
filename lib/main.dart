@@ -26,6 +26,8 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           // You can use the library anywhere in the app even in theme
           theme: ThemeData(
+            fontFamily: 'Nunito',
+            primaryColor: white,
             primarySwatch: Colors.blueGrey,
             textTheme: Typography.englishLike2018.apply(fontSizeFactor: 1.sp),
           ),
@@ -64,12 +66,15 @@ class _SplashScreenState extends State<SplashScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
-              'assets/logo/filemanager.png',
+              'assets/icons/filemanager.png',
             ),
             const SizedBox(
               height: 15,
             ),
-            customText('File Manager App')
+            customText(
+                text: 'File Manager App',
+                color: kPrimaryColor,
+                fontWeight: fwBold)
           ],
         ),
       ),
