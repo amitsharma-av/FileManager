@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 const Color transparent = Colors.transparent;
-const Color kPrimaryColor = Color(0xff1B252D);
-Color backgroundColor = white.withOpacity(.95);
+const Color kPrimaryColor = Color.fromRGBO(27, 37, 45, 1);
+const Color backgroundColor = Color.fromRGBO(246, 248, 254, 1);
+const Color greenAccent = Color.fromRGBO(43, 224, 159, 1);
 const Color white = Colors.white;
 const Color black = Colors.black;
 const Color lime = Colors.lime;
 const Color redAccent = Colors.redAccent;
-const Color greenAccent = Colors.greenAccent;
-const Color white10 = Colors.white10;
-const Color white70 = Colors.white70;
+const Color grey = Colors.grey;
+const Color greyDark = Color.fromARGB(83, 255, 255, 255);
 FontWeight fwNormal = FontWeight.normal;
 FontWeight fwBold = FontWeight.bold;
 FontWeight fw500 = FontWeight.w500;
@@ -30,12 +30,14 @@ customContainer(
     double? height,
     double? width,
     double? radius,
-    EdgeInsetsGeometry? padding}) {
+    EdgeInsetsGeometry? padding,
+    List<BoxShadow>? boxShadow}) {
   return Container(
-    height: height ?? .33.sh,
-    width: width ?? .41.sw,
+    height: height,
+    width: width,
     padding: padding,
     decoration: BoxDecoration(
+      boxShadow: boxShadow,
       gradient: LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.centerRight,
@@ -88,7 +90,7 @@ customText(
     style: TextStyle(
         color: color ?? white,
         fontWeight: fontWeight ?? fw500,
-        fontSize: fontSize ?? 14.sp),
+        fontSize: fontSize ?? 16.sp),
   );
 }
 
