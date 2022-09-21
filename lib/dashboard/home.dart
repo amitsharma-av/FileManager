@@ -14,10 +14,15 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: white,
-        leading: const Icon(
-          Icons.chevron_left,
-          color: redAccent,
-          size: 35,
+        leading: InkWell(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: const Icon(
+            Icons.chevron_left,
+            color: redAccent,
+            size: 35,
+          ),
         ),
         title: SizedBox(
           height: 48,
