@@ -23,6 +23,9 @@ const Color linearColor1 = Color.fromARGB(255, 55, 49, 158);
 const Color linearColor3 = Color.fromARGB(255, 88, 160, 237);
 const Color linearColor4 = Color.fromARGB(255, 57, 110, 209);
 
+const iceLogo = 'assets/images/ice2.png';
+const icecream = 'assets/images/icecream.png';
+
 customContainer(
     {required Widget child,
     Color? color1,
